@@ -1,7 +1,7 @@
 import { Keystone } from '@keystonejs/keystone';
 import { KnexAdapter } from '@keystonejs/adapter-knex';
 import { File } from '@keystonejs/fields';
-import { LocalFileAdapter, CloudinaryFileAdapter } from '@keystonejs/file-adapters';
+import { LocalFileAdapter, CloudinaryAdapter } from '@keystonejs/file-adapters';
 
 const keystone = new Keystone({
     name: 'Typescript Test',
@@ -12,7 +12,7 @@ const local = new LocalFileAdapter({
     src: 'something',
 });
 
-const cloudinary = new CloudinaryFileAdapter({
+const cloudinary = new CloudinaryAdapter({
     cloudName: 'something',
     apiKey: 'something',
     apiSecret: 'something',

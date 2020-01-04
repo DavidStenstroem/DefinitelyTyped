@@ -25,15 +25,15 @@ declare module '@keystonejs/file-adapters' {
         publicUrl(params: { filename: string }): string;
     }
 
-    interface CloudinaryFileAdapterConfig {
+    interface CloudinaryAdapterConfig {
         cloudName: string;
         apiKey: string;
         apiSecret: string;
         folder?: string;
     }
 
-    class CloudinaryFileAdapter {
-        constructor(options: CloudinaryFileAdapterConfig);
+    class CloudinaryAdapter {
+        constructor(options: CloudinaryAdapterConfig);
 
         save(params: {
             stream: any;
